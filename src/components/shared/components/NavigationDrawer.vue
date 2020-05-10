@@ -3,11 +3,31 @@
         <v-list>
             <v-list-item>
                 <v-list-item-action>
-                    <v-icon>mdi-view-dashboard</v-icon>
+                    <v-icon>mdi-account</v-icon>
                 </v-list-item-action>
                 <v-list-item-content>
                     <v-list-item-title>
-                        Dashboard
+                        Profile
+                    </v-list-item-title>
+                </v-list-item-content>
+            </v-list-item>
+            <v-list-item>
+                <v-list-item-action>
+                    <v-icon>mdi-cart</v-icon>
+                </v-list-item-action>
+                <v-list-item-content>
+                    <v-list-item-title>
+                        Cart
+                    </v-list-item-title>
+                </v-list-item-content>
+            </v-list-item>
+                        <v-list-item>
+                <v-list-item-action>
+                    <v-icon>mdi-history</v-icon>
+                </v-list-item-action>
+                <v-list-item-content>
+                    <v-list-item-title>
+                        Order History
                     </v-list-item-title>
                 </v-list-item-content>
             </v-list-item>
