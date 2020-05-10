@@ -1,17 +1,20 @@
 <template>
   <v-app>
-    <v-app-bar color="primary" app>
-    </v-app-bar>
+    <Navigation/>
 
     <router-view/>
   </v-app>
 </template>
 
 <script>
+import Navigation from './components/shared/Navigation';
+
 export default {
   name: "App",
 
-  components: {},
+  components: {
+    Navigation
+  },
 
   data: () => ({
     //
