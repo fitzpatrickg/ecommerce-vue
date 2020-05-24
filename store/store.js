@@ -7,7 +7,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         navigationDrawer: false,
-        categories: []
+        categories: [],
+        products: []
     },
     mutations: {
         toggleNavigationDrawer(state) {
@@ -15,6 +16,9 @@ export default new Vuex.Store({
         },
         updateCategories(state, categories) {
             state.categories = categories;
+        },
+        updateProducts(state, products) {
+            state.products = products;
         }
     },
     actions: {
@@ -23,9 +27,14 @@ export default new Vuex.Store({
                 .then(categories => {
                     commit('updateCategories', categories);
                 })
-                .catch(error => {
-                    console.log(error);
+                .catch(error => console.log(error));
+        },
+        getProductsByCategory({ commit }, categoryName) {
+            axios.get(`http://localhost:3000/categories/${categoryName}`)
+                .then(products => {
+                    commit('updateProducts', products);
                 })
+                .catch(error => console.log(error));
         }
     }
 });

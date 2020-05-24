@@ -20,6 +20,11 @@ export default new Router({
             path: '/product/:id',
             name: 'SingleProduct',
             component: () => import('./src/components/views/SingleProduct/SingleProduct.vue')
+        },
+        {
+            path: '/categories/:name',
+            name: 'SingleCategory',
+            component: () => import('./src/components/views/SingleCategory/SingleCategory.vue')
         }
     ]
 });
