@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer v-model="navigationDrawerState" app>
+    <v-navigation-drawer v-model="navigationDrawerState" dark app>
         <v-list>
             <v-list-item>
                 <v-list-item-action>

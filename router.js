@@ -9,12 +9,17 @@ export default new Router({
         {
             path: '/',
             name: 'HomePage',
-            component: () => import('./src/components/views/home/HomePage.vue')
+            component: () => import('./src/components/views/HomePage/HomePage.vue')
         },
         {
             path: '/categories',
             name: 'ProductCategories',
-            component: () => import('./src/components/views/productCategories/ProductCategories.vue')
+            component: () => import('./src/components/views/ProductCategories/ProductCategories.vue')
+        },
+        {
+            path: '/product/:id',
+            name: 'SingleProduct',
+            component: () => import('./src/components/views/SingleProduct/SingleProduct.vue')
         }
     ]
 });

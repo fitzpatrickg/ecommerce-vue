@@ -6,6 +6,20 @@
 
 <script>
 export default {
-    name: 'ProductCategories'
+    name: 'ProductCategories',
+    data() {
+        return {
+            categories: []
+        }
+    },
+    created() {
+        this.$store.dispatch('getCategories')
+            .then(cats => {
+                this.categories = cats;
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
 }
 </script>

@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <Navigation/>
-
     <router-view/>
   </v-app>
 </template>
@@ -18,6 +17,13 @@ export default {
 
   data: () => ({
     //
-  })
+  }),
+  created() {
+    this.$vuetify.theme.primary = '#FF652F';
+    this.$vuetify.theme.secondary = '#747474';
+    this.$vuetify.theme.success = '#FFE400';
+    this.$vuetify.theme.info = '#14A76C';
+    this.$vuetify.theme.error = '#ED4337';
+  }
 };
 </script>
